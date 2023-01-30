@@ -11,7 +11,7 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v2
         env:
-          TEST_NAME: guerreraTest
+          TEST_NAME: numeroTest
         with:
           configuration: test/phpunit.xml
           args: --coverage-text
