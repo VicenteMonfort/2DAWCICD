@@ -25,9 +25,9 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build
         run: |
-          docker build -t ${{ secrets.DOCKER_USER }}/numeroncc:${{ github.sha }} .
-          docker build -t ${{ secrets.DOCKER_USER }}/numeroncc:latest .
+          docker build -t ${{ secrets.DOCKER_USER }}/numeroCICD:${{ github.sha }} .
+          docker build -t ${{ secrets.DOCKER_USER }}/numeroCICD:latest .
       - name: Push
         run: |
-          docker push ${{ secrets.DOCKER_USER }}/numeroncc:${{ github.sha }}
-          docker push ${{ secrets.DOCKER_USER }}/numeroncc:latest    
+          docker push ${{ secrets.DOCKER_USER }}/numeroCICD:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/numeroCICD:latest    
